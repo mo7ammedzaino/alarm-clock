@@ -1,13 +1,11 @@
-const currentTime = document.querySelector("h1"),
-  content = document.querySelector(".content"),
-  selectMenu = document.querySelectorAll("select"),
-  setALarmBtn = document.querySelector("button");
+const currentTime = document.querySelector("h1");
+const content = document.querySelector(".content");
+const selectMenu = document.querySelectorAll("select");
+const setALarmBtn = document.querySelector("button");
 
 let alarmTime,
   isAlarmset = false;
-ringtone = new Audio(
-  "./Alarm ringtone _ music - موسيقى منبه الصباح (128 kbps).mp3"
-);
+ringtone = new Audio("/AUDIO.mp3");
 
 for (let i = 12; i > 0; i--) {
   i = i < 10 ? "0" + i : i;
