@@ -1,11 +1,11 @@
-const currentTime = document.querySelector("h1");
-const content = document.querySelector(".content");
-const selectMenu = document.querySelectorAll("select");
-const setALarmBtn = document.querySelector("button");
+const currentTime = document.querySelector("h1"),
+  content = document.querySelector(".content"),
+  selectMenu = document.querySelectorAll("select"),
+  setALarmBtn = document.querySelector("button");
 
 let alarmTime,
   isAlarmset = false;
-ringtone = new Audio("/AUDIO.mp3");
+ringtone = new Audio("/img&&music/AUDIO.mp3");
 
 for (let i = 12; i > 0; i--) {
   i = i < 10 ? "0" + i : i;
@@ -61,7 +61,7 @@ function setAlarm() {
   // getting hour, minute, ampm select tag value
   let time = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
 
-  if (time.includes("Hour") || time.includes("Minute") ) {
+  if (time.includes("Hour") || time.includes("Minute")) {
     return alert("Please, select a valid time to set Alarm! ");
   }
   isAlarmset = true;
